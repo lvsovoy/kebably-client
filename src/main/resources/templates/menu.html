@@ -18,35 +18,47 @@
 <div class="container">
     <h2 class="hello-title" th:text="'Hello, ' + ${name} + '!'"></h2>
 
-    <form>
+    <form action="#" th:action="@{/}" th:object="${order}" method="post">
         <!--TODO: radio buttons as images http://jsfiddle.net/La8wQ/313/ -->
+        <!--TODO: implement form steps https://www.w3schools.com/howto/howto_js_form_steps.asp -->
 
-        <fieldset class="form-group">
             <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
-                               checked>
-                        <label class="form-check-label" for="gridRadios1">
-                            First radio
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                            Second radio
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                        <label class="form-check-label" for="gridRadios3">
-                            Third radio
-                        </label>
-                    </div>
+                <div class="col">
+                    <label>
+                        <select id="inputState" class="form-control" th:field>
+                            <option selected>Kebab</option>
+                            <option>Burger</option>
+                        </select>
+                        Choose
+                    </label>
                 </div>
             </div>
-        </fieldset>
+        <div class="row">
+            <div class="col">
+                <div class="radio">
+                    <label>
+                        <input class="form-check-input" type="radio" name="sizeSelect" id="sizeS" value="S" checked>
+                        Small
+                        </label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="radio">
+                    <label>
+                        <input class="form-check-input" type="radio" name="sizeSelect" id="sizeM" value="M">
+                        Medium
+                        </label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="radio">
+                    <label>
+                        <input class="form-check-input" type="radio" name="sizeSelect" id="sizeL" value="L">
+                        Large
+                        </label>
+                </div>
+            </div>
+            </div>
 
         <div class="form-group row">
             <div class="col-sm-10">
@@ -54,6 +66,9 @@
             </div>
         </div>
     </form>
+    <div class="row">
+        <img th:src="@{/resorces/img/qr.png}"/>
+    </div>
 </div>
 
 
