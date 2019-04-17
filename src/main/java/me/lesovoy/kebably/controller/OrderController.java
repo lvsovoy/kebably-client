@@ -21,7 +21,7 @@ public class OrderController {
     public String order(Model model, @ModelAttribute Order order) {
         model.addAttribute("name", null);
         System.out.println(order.toString());
-        //TODO: implement form field mapping into internal model classes
+        //TODO: implement form field mapping into internal model classes https://medium.com/@grokwich/spring-boot-thymeleaf-html-form-handling-762ef0d51327
         //TODO: generate qrcode to /resources/img/qr.png
 
         return "menu";
