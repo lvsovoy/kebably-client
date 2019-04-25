@@ -18,16 +18,17 @@
 <div class="container">
     <h2 class="hello-title" th:text="'Hello, ' + ${name} + '!'"></h2>
 
-    <form action="#" th:action="@{/}" th:object="${order}" method="post">
+    <form action="#" method="post" th:action="@{/}" th:object="${item}">
         <!--TODO: radio buttons as images http://jsfiddle.net/La8wQ/313/ -->
         <!--TODO: implement form steps https://www.w3schools.com/howto/howto_js_form_steps.asp -->
+        <!--TODO: implement form serializing to json object https://jsfiddle.net/gabrieleromanato/bynaK/  -->
 
             <div class="row">
                 <div class="col">
                     <label>
-                        <select id="inputState" class="form-control" th:field>
-                            <option selected>Kebab</option>
-                            <option>Burger</option>
+                        <select id="inputState" class="form-control">
+                            <option th:value="'Kebab'" th:text="Kebab" selected></option>
+                            <option th:value="'Burger'" th:text="Burger"></option>
                         </select>
                         Choose
                     </label>

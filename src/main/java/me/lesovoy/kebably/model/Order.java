@@ -8,6 +8,10 @@ public class Order {
     @JsonProperty("order")
     private List<Item> order;
 
+    public void addItem(Item item) {
+       this.order.add(item);
+    }
+
     public List<Item> getOrder() {
         return order;
     }

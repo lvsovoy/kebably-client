@@ -9,8 +9,18 @@ public class Item {
     @JsonProperty("name")
     private String name;
 
-    @JsonProperty("property")
-    private List<Property> property;
+    @JsonProperty("properties")
+    private List<Property> properties;
+
+    //TODO: Price
+
+    public Item(String name) {
+        this.name = name;
+    }
+
+    public void addProperty(Property property){
+        this.properties.add(property);
+    }
 
     public String getName() {
         return name;
@@ -20,11 +30,11 @@ public class Item {
         this.name = name;
     }
 
-    public List<Property> getProperty() {
-        return property;
+    public List<Property> getProperties() {
+        return properties;
     }
 
-    public void setProperty(List<Property> property) {
-        this.property = property;
+    public void setProperties(List<Property> properties) {
+        this.properties = properties;
     }
 }
