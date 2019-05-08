@@ -16,6 +16,7 @@ function updateQR() {
     qrcode.clear();
   }
   qrcode.makeCode($("form").serialize());
+  $("#qrcode>img").css("margin", "auto");
 }
 
 $('form').submit(function (e) {
