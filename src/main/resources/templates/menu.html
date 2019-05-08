@@ -16,25 +16,21 @@
     </button>
 </nav>
 <div class="container">
-    <h2 class="hello-title" th:text="'Hello, ' + ${name} + '!'"></h2>
 
     <form action="#" method="post" th:action="@{/}" th:object="${item}">
         <!--TODO: radio buttons as images http://jsfiddle.net/La8wQ/313/ -->
         <!--TODO: implement form steps https://www.w3schools.com/howto/howto_js_form_steps.asp -->
         <!--TODO: implement form serializing to json object https://jsfiddle.net/gabrieleromanato/bynaK/  -->
 
-            <div class="row">
+            <div class="form-group row">
                 <div class="col">
-                    <label>
-                        <select id="inputState" class="form-control" name="name">
-                            <option value="kebab" selected>Kebab</option>
-                            <option value="burger" >Burger</option>
-                        </select>
-                        Choose
-                    </label>
+                    <select class="form-control form-control-lg" name="name">
+                        <option value="kebab" selected>Kebab</option>
+                        <option value="burger" >Burger</option>
+                    </select>
                 </div>
             </div>
-        <div class="row">
+        <div class="form-group row">
             <div class="col">
                 <div class="radio">
                     <label>
