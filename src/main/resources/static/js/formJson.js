@@ -23,3 +23,8 @@ $('form').submit(function (e) {
   e.preventDefault();
   updateQR();
 });
+
+function generateUuid() {
+    document.getElementById("uuid").value = Math.floor(Math.random() * Math.floor(9999)+1001)
+}
+

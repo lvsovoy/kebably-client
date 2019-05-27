@@ -7,7 +7,7 @@
           href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
           integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 </head>
-<body>
+<body onload="generateUuid()">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand">Kebably</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -22,9 +22,15 @@
         <!--TODO: implement form steps https://www.w3schools.com/howto/howto_js_form_steps.asp -->
         <!--TODO: implement form serializing to json object https://jsfiddle.net/gabrieleromanato/bynaK/  -->
 
+        <div class="form-group row">
+            <div class="col">
+                <input class="form-control form-control-lg" type="text" name="userName">
+                <input class="form-control form-control-lg" type="text" name="id" id="uuid" disabled>
+            </div>
+        </div>
             <div class="form-group row">
                 <div class="col">
-                    <select class="form-control form-control-lg" name="name">
+                    <select class="form-control form-control-lg" name="item">
                         <option value="kebab" selected>Kebab</option>
                         <option value="burger" >Burger</option>
                     </select>
