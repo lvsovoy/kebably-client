@@ -1,0 +1,17 @@
+- id written as a cookie
+ passed into the form in form of a hidden field
+    added need to make cookie consent
+
+- form builder
+ form created dynamically using menu schema
+
+- price 
+ calculate price 
+    requires form builder
+
+- dynamic form
+ form created dynamically from less granular blocks as form builder, for te sake of mvp
+
+-frontend design
+
+    
